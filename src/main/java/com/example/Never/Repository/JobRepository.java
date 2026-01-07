@@ -7,9 +7,10 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Repository
-public interface JobRepository extends JpaRepository<Job, String> {
+public interface JobRepository extends JpaRepository<Job, UUID> {
 
     List<Job> findByStatus(JobStatus status);
     
@@ -19,4 +20,5 @@ public interface JobRepository extends JpaRepository<Job, String> {
     );
 
     Optional<Job> findFirstByStatusOrderByCreatedAtAsc(JobStatus status);
+
 }
