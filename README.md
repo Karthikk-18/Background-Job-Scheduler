@@ -13,8 +13,7 @@ A distributed job scheduling system built with Spring Boot that allows users to 
 - **🎨 Modern UI** - Beautiful, responsive web interface with glassmorphism design
 - **⚡ RESTful API** - Easy-to-use REST endpoints for job management
 - **🔒 Spring Security** - Password encryption and session management
-- **💾 Database Integration** - Support for H2 (development) and PostgreSQL (production)
-- **📱 Responsive Design** - Mobile-friendly interface
+- **💾 Database Integration** - MySQL (production)
 
 ## 🏗️ Architecture
 
