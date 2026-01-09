@@ -20,7 +20,6 @@ public class JobScheduler {
     @Scheduled(fixedDelay = 5000)
     public void moveSubmittedToQueued(){
 
-        System.out.println("Scheduler Tick ");
         List<Job> submittedJobs = jobRepository.findByStatus(JobStatus.SUBMITTED);
 
         System.out.println("Found "+submittedJobs.size()+ " submitted Jobs");

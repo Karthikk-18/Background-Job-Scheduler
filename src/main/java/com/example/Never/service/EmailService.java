@@ -20,7 +20,6 @@ public class EmailService {
         message.setTo(payload.getTo());
         message.setSubject(payload.getSubject());
         message.setText(payload.getBody());
-        System.out.println("🚀 Attempting to send REAL email to: " + payload.getTo());
         System.out.println("MAIL USER = " + System.getenv("EMAIL_USERNAME"));
         mailSender.send(message);
     }
