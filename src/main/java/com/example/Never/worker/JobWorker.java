@@ -16,10 +16,10 @@ import java.util.Optional;
 @Component
 public class JobWorker {
 
-    private final JobRepository jobRepository;
+    private final JobRepository<U, Number> jobRepository;
     private final EmailService emailService;
 
-    public JobWorker(JobRepository jobRepository, EmailService emailService) {
+    public JobWorker(JobRepository<U, Number> jobRepository, EmailService emailService) {
         this.jobRepository = jobRepository;
         this.emailService = emailService;
     }

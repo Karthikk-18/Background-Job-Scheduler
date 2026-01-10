@@ -6,13 +6,15 @@ import com.example.Never.model.JobStatus;
 import jakarta.transaction.Transactional;
 import org.springframework.scheduling.annotation.Scheduled;
 
+import java.rmi.server.UID;
 import java.util.List;
+import java.util.UUID;
 
 public class JobRecoveryScheduler {
 
-    private final JobRepository jobRepository;
+    private final JobRepository<UUID, Number> jobRepository;
 
-    public JobRecoveryScheduler(JobRepository jobRepository){
+    public JobRecoveryScheduler(JobRepository<UUID, Number> jobRepository){
         this.jobRepository = jobRepository;
     }
 

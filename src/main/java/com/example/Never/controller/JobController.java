@@ -18,9 +18,9 @@ import java.util.UUID;
 public class JobController {
 
     private final JobService jobService;
-    private final JobRepository jobRepository;
+    private final JobRepository<U, Number> jobRepository;
 
-    public JobController(JobService jobService, JobRepository jobRepository){
+    public JobController(JobService jobService, JobRepository<U, Number> jobRepository){
         this.jobService = jobService;
         this.jobRepository = jobRepository;
     }

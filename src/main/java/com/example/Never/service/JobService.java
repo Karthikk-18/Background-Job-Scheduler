@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class JobService {
-    private final JobRepository jobRepository;
+    private final JobRepository<U, Number> jobRepository;
 
-    public JobService(JobRepository jobRepository) {
+    public JobService(JobRepository<U, Number> jobRepository) {
         this.jobRepository = jobRepository;
     }
 
