@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Job Scheduler</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Login</h1>
+        <div class="card">
+            <h2>Welcome Back</h2>
+            
+            <div th:if="${error}" class="alert error">
+                <span th:text="${error}"></span>
+            </div>
+            
+            <div th:if="${message}" class="alert success">
+                <span th:text="${message}"></span>
+            </div>
+            
+            <div th:if="${success}" class="alert success">
+                <span th:text="${success}"></span>
+            </div>
+            
+            <form th:action="@{/perform-login}" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                
+                <button type="submit" class="submit-btn">
+                    🔓 Login
+                </button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <p style="color: #64748b;">Don't have an account? 
+                    <a href="/register.html" style="color: #667eea; text-decoration: none; font-weight: 600;">Register here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

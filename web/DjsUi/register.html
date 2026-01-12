@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Job Scheduler</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Register</h1>
+        <div class="card">
+            <h2>Create Account</h2>
+            
+            <div th:if="${error}" class="alert error">
+                <span th:text="${error}"></span>
+            </div>
+            
+            <form th:action="@{/register}" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required minlength="6">
+                
+                <button type="submit" class="submit-btn">
+                    ✅ Create Account
+                </button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <p style="color: #64748b;">Already have an account? 
+                    <a href="/login.html" style="color: #667eea; text-decoration: none; font-weight: 600;">Login here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

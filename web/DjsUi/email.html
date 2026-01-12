@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Job</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>📧 Create Email Job</h1>
+    <div class="card">
+        <h2>Job Details</h2>
+
+        <label for="to">Recipient Email</label>
+        <input type="email" id="to" placeholder="example@gmail.com">
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="Enter email subject">
+
+        <label for="body">Message Body</label>
+        <textarea id="body" placeholder="Enter your message here..."></textarea>
+
+        <button class="submit-btn" onclick="submitEmailJob()">
+            ✉️ Submit Job
+        </button>
+
+        <div id="status"></div>
+    </div>
+    <button class="back-btn" onclick="goBack()">
+        ⬅ Back to Jobs
+    </button>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
