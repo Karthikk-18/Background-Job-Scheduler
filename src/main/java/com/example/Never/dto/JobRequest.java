@@ -11,3 +11,4 @@ public class JobRequest {
     private String type;
     private String payload;
 }
+
