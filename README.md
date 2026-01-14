@@ -4,7 +4,6 @@ A distributed job scheduling system built with Spring Boot that allows users to 
 
 ![Java](https://img.shields.io/badge/Java-17+-orange.svg)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## 🌟 Features
 
@@ -13,7 +12,7 @@ A distributed job scheduling system built with Spring Boot that allows users to 
 - **🎨 Modern UI** - Beautiful, responsive web interface with glassmorphism design
 - **⚡ RESTful API** - Easy-to-use REST endpoints for job management
 - **🔒 Spring Security** - Password encryption and session management
-- **💾 Database Integration** - MySQL (production)
+- **💾 Database Integration** - MySQL 
 
 ## 🏗️ Architecture
 
@@ -36,7 +35,7 @@ The system follows a distributed microservices architecture:
 
 - Java 17 or higher
 - Maven 3.6+
-- PostgreSQL (for production) or H2 (for development)
+- MySql
 
 ### Installation
 
@@ -55,13 +54,6 @@ The system follows a distributed microservices architecture:
    spring.datasource.url=jdbc:h2:mem:jobscheduler
    spring.datasource.username=sa
    spring.datasource.password=
-   ```
-   
-   For PostgreSQL (Production):
-   ```properties
-   spring.datasource.url=jdbc:postgresql://localhost:5432/jobscheduler
-   spring.datasource.username=your_username
-   spring.datasource.password=your_password
    ```
 
 3. **Build the project**
@@ -109,52 +101,11 @@ curl -X POST http://localhost:8080/jobs \
   }'
 ```
 
-## 🗂️ Project Structure
-
-```
-Distributed-Job-Scheduler/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/example/jobscheduler/
-│   │   │       ├── config/
-│   │   │       │   └── SecurityConfig.java
-│   │   │       ├── controller/
-│   │   │       │   ├── AuthController.java
-│   │   │       │   └── JobController.java
-│   │   │       ├── entity/
-│   │   │       │   ├── User.java
-│   │   │       │   └── Job.java
-│   │   │       ├── repository/
-│   │   │       │   ├── UserRepository.java
-│   │   │       │   └── JobRepository.java
-│   │   │       ├── service/
-│   │   │       │   ├── UserService.java
-│   │   │       │   ├── CustomUserDetailsService.java
-│   │   │       │   └── JobService.java
-│   │   │       └── JobSchedulerApplication.java
-│   │   └── resources/
-│   │       ├── templates/
-│   │       │   ├── index.html
-│   │       │   ├── email-job.html
-│   │       │   ├── login.html
-│   │       │   └── register.html
-│   │       ├── static/
-│   │       │   ├── css/
-│   │       │   │   └── style.css
-│   │       │   └── js/
-│   │       │       └── app.js
-│   │       └── application.properties
-│   └── test/
-├── pom.xml
-└── README.md
-```
-
 ## 🛠️ Technologies Used
 
-- **Backend**: Spring Boot 3.x
+- **Backend**: Spring Boot 4.0.1
 - **Security**: Spring Security with BCrypt password encoding
-- **Database**: Spring Data JPA with PostgreSQL/H2
+- **Database**: Spring Data JPA with MySql/H2
 - **Frontend**: HTML5, CSS3 (with Glassmorphism), JavaScript
 - **Template Engine**: Thymeleaf
 - **Build Tool**: Maven
@@ -190,29 +141,6 @@ Intuitive form for creating and scheduling email jobs
 - [ ] Retry Mechanism for Failed Jobs
 - [ ] API Rate Limiting
 - [ ] Docker Containerization
-- [ ] Kubernetes Deployment
-
-## 📝 Configuration
-
-### Application Properties
-
-Key configuration options in `application.properties`:
-
-```properties
-# Server Configuration
-server.port=8080
-
-# Database
-spring.datasource.url=jdbc:postgresql://localhost:5432/jobscheduler
-spring.jpa.hibernate.ddl-auto=update
-
-# Security
-spring.security.user.name=admin
-spring.security.user.password=admin123
-
-# Logging
-logging.level.org.springframework.security=DEBUG
-```
 
 ## 🤝 Contributing
 
@@ -223,10 +151,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 👨‍💻 Author
 
@@ -240,12 +164,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Spring Security for robust authentication
 - Thymeleaf for powerful templating
 
-## 📞 Support
-
-For support, please open an issue in the GitHub repository or contact the maintainer.
-
 ---
 
 ⭐ If you found this project helpful, please give it a star!
-
-Made with ❤️ by Karthikk-18
