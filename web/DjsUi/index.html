@@ -4,29 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Scheduler</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<div class="container">
-    <h1>📦 Job Scheduler</h1>
-    <div class="card">
-        <h2>Available Jobs</h2>
-        <div class="job-list">
-            <button class="job-btn" onclick="goToEmailJob()">
-                <span class="icon">📧</span>
-                <span>Email Job</span>
-            </button>
-            <button class="job-btn disabled">
-                <span class="icon">📩</span>
-                <span>SMS Job (Coming Soon)</span>
-            </button>
-            <button class="job-btn disabled">
-                <span class="icon">🔔</span>
-                <span>Webhook Job (Coming Soon)</span>
-            </button>
+    <!-- Logout Button -->
+    <button class="logout-btn" onclick="logout()">🚪 Logout</button>
+
+    <div class="container">
+        <h1>📦 Job Scheduler</h1>
+        <div class="card">
+            <h2>Available Jobs</h2>
+            <p style="text-align: center; color: #64748b; margin-bottom: 20px;">
+                Welcome, <span id="username-display" style="font-weight: 600; color: #667eea;">User</span>!
+            </p>
+            <div class="job-list">
+                <button class="job-btn" onclick="goToEmailJob()">
+                    <span class="icon">📧</span>
+                    <span>Email Job</span>
+                </button>
+                <button class="job-btn disabled">
+                    <span class="icon">📱</span>
+                    <span>SMS Job (Coming Soon)</span>
+                </button>
+                <button class="job-btn disabled">
+                    <span class="icon">🔔</span>
+                    <span>Webhook Job (Coming Soon)</span>
+                </button>
+            </div>
         </div>
     </div>
-</div>
-<script src="js/app.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>

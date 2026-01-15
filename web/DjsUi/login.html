@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,29 +12,17 @@
         <div class="card">
             <h2>Welcome Back</h2>
             
-            <div th:if="${error}" class="alert error">
-                <span th:text="${error}"></span>
-            </div>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter username">
             
-            <div th:if="${message}" class="alert success">
-                <span th:text="${message}"></span>
-            </div>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password">
             
-            <div th:if="${success}" class="alert success">
-                <span th:text="${success}"></span>
-            </div>
+            <button class="submit-btn" onclick="login()">
+                🔓 Login
+            </button>
             
-            <form th:action="@{/perform-login}" method="post">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter username" required>
-                
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter password" required>
-                
-                <button type="submit" class="submit-btn">
-                    🔓 Login
-                </button>
-            </form>
+            <div id="status"></div>
             
             <div style="text-align: center; margin-top: 20px;">
                 <p style="color: #64748b;">Don't have an account? 
@@ -43,5 +31,7 @@
             </div>
         </div>
     </div>
+    
+    <script src="/js/auth.js"></script>
 </body>
 </html>

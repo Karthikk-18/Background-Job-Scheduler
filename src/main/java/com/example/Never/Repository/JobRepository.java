@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Repository
-public interface JobRepository<U, L extends Number> extends JpaRepository<Job, UUID> {
+public interface JobRepository<U, L extends Number> extends JpaRepository<Job, Long> {
 
     List<Job> findByStatus(JobStatus status);
     

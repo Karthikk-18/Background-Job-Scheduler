@@ -5,12 +5,11 @@ import lombok.Data;
 import lombok.Getter;
 
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Data
 @Getter
 public class JobStatusResponse {
-    private UUID id;
+    private Long id;
     private JobStatus status;
     private int retryCount;
     private int maxRetries;
@@ -18,7 +17,7 @@ public class JobStatusResponse {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public JobStatusResponse(UUID id, JobStatus status, int retryCount,
+    public JobStatusResponse(Long id, JobStatus status, int retryCount,
                              int maxRetries, String lastError,
                              LocalDateTime createdAt, LocalDateTime updatedAt){
         this.id = id;

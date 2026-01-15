@@ -18,9 +18,9 @@ import java.util.UUID;
 public class JobController {
 
     private final JobService jobService;
-    private final JobRepository<U, Number> jobRepository;
+    private final JobRepository<UUID, Number> jobRepository;
 
-    public JobController(JobService jobService, JobRepository<U, Number> jobRepository){
+    public JobController(JobService jobService, JobRepository<UUID, Number> jobRepository){
         this.jobService = jobService;
         this.jobRepository = jobRepository;
     }
@@ -36,7 +36,7 @@ public class JobController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<JobStatusResponse> getJobStatus(@PathVariable UUID id){
+    public ResponseEntity<JobStatusResponse> getJobStatus(@PathVariable Long id){
         Optional<Job> optionalJob = jobRepository.findById(id);
 
         if(optionalJob.isEmpty()){

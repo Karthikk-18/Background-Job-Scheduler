@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class JobService {
-    private final JobRepository<U, Number> jobRepository;
+    private final JobRepository jobRepository;
 
-    public JobService(JobRepository<U, Number> jobRepository) {
+    public JobService(JobRepository jobRepository) {
         this.jobRepository = jobRepository;
     }
 
@@ -22,7 +22,7 @@ public class JobService {
         job.setRetryCount(0);
         job.setMaxRetries(3);
 
-        return jobRepository.save(job);
+        return (Job) jobRepository.save(job);
     }
 
 }

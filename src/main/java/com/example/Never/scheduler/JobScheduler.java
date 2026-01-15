@@ -11,9 +11,9 @@ import java.util.List;
 @Component
 public class JobScheduler {
 
-    private final JobRepository<U, Number> jobRepository;
+    private final JobRepository jobRepository;
 
-    public JobScheduler(JobRepository<U, Number> jobRepository){
+    public JobScheduler(JobRepository jobRepository){
         this.jobRepository = jobRepository;
     }
 
