@@ -29,78 +29,6 @@ The system follows a distributed microservices architecture:
                      └──────────────┘
 ```
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Java 17 or higher
-- Maven 3.6+
-- MySql
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Karthikk-18/Distributed-Job-Scheduler.git
-   cd Distributed-Job-Scheduler
-   ```
-
-2. **Configure the database**
-   
-   Edit `src/main/resources/application.properties`:
-   
-   For H2 (Development):
-   ```properties
-   spring.datasource.url=jdbc:h2:mem:jobscheduler
-   spring.datasource.username=sa
-   spring.datasource.password=
-   ```
-
-3. **Build the project**
-   ```bash
-   mvn clean install
-   ```
-
-4. **Run the application**
-   ```bash
-   mvn spring-boot:run
-   ```
-
-5. **Access the application**
-   
-   Open your browser and navigate to: `http://localhost:8080`
-
-## 📚 API Endpoints
-
-### Authentication
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/login` | Login page |
-| POST | `/perform-login` | Authenticate user |
-| GET | `/register` | Registration page |
-| POST | `/register` | Create new account |
-| POST | `/logout` | Logout user |
-
-### Job Management
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/` | Dashboard - View all job types |
-| GET | `/email-job` | Email job creation form |
-| POST | `/jobs` | Submit a new job |
-
-### Job Submission Example
-
-```bash
-curl -X POST http://localhost:8080/jobs \
-  -H "Content-Type: application/json" \
-  -d '{
-    "type": "EMAIL",
-    "payload": "{\"to\":\"user@example.com\",\"subject\":\"Test\",\"body\":\"Hello\"}"
-  }'
-```
-
 ## 🛠️ Technologies Used
 
 - **Backend**: Spring Boot 4.0.1
@@ -110,7 +38,7 @@ curl -X POST http://localhost:8080/jobs \
 - **Template Engine**: Thymeleaf
 - **Build Tool**: Maven
 
-## 🎨 UI Screenshots
+## 🎨 UI
 
 ### Login Page
 Beautiful gradient-based login interface with form validation
